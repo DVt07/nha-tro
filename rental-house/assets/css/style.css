@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental House</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="top-actions">
+                <a class="button secondary" href="login.html">Đăng nhập</a>
+            </div>
+            <h1>Rental House</h1>
+            <p>Chọn một phòng để xem chi tiết và đặt ngay.</p>
+
+            <div class="nav-toolbar">
+                <div class="filter-tabs">
+                    <button class="tab active">Tất cả</button>
+                    <button class="tab">Studio</button>
+                    <button class="tab">Tiện nghi</button>
+                    <button class="tab">Giá rẻ</button>
+                </div>
+                <div class="search-box">
+                    <input type="search" placeholder="Tìm kiếm phòng...">
+                    <button class="button primary" type="button">Tìm</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="house-list">
+                <article class="card">
+                    <h2>Phòng đầy đủ tiện nghi</h2>
+                    <p>Phòng rộng 30m², có ban công, wifi miễn phí và bếp chung.</p>
+                    <a class="button" href="room.html">Xem chi tiết</a>
+                </article>
+
+                <article class="card">
+                    <h2>Studio cao cấp</h2>
+                    <p>Phòng studio riêng với nhà vệ sinh trong phòng, gần trung tâm.</p>
+                    <a class="button" href="room.html">Xem chi tiết</a>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Nhà cho thuê dễ dàng, thuận tiện và nhanh chóng.</p>
+        </footer>
+    </div>
+</body>
+</html>
