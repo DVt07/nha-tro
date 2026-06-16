@@ -1,0 +1,44 @@
+ 1. **Cấu trúc thư mục:**   
+rental-house/
+├── index.html                 (Trang chủ)
+├── rooms.html                 (Danh sách phòng)
+├── room-detail.html           ( chi tiết)
+├── post-room.html             (Đăng tin)
+├── groups.html                (Trang nhóm trọ)
+├── group-detail.html          (chi tiết nhóm )
+├── login.html                  (đăng nhập )
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── data.js            (Dữ liệu mẫu + quản lý localStorage) chưa làm đc 
+│       ├── auth.js             (giá )
+│       ├── rooms.js            (phòng )
+│       ├── groups.js     
+│       ├── expenses.js
+│       └── utils.js
+├── components/                (HTML tái sử dụng)
+│   ├── navbar.html
+│   └── sidebar.html
+└── images/                    (ảnh mẫu)
+
+2 . **Chức năng chính:**
+1. Auth (Giả)
+
+Đăng ký / Đăng nhập (lưu thông tin vào localStorage)
+Phân quyền: Người thuê / Chủ nhà
+
+2. Tìm nhà trọ
+
+Danh sách phòng (card)
+Lọc theo giá, quận, tiện ích
+Xem chi tiết
+Lưu tin yêu thích
+
+3. Quản lý nhóm trọ
+
+Tạo nhóm
+Thêm thành viên (giả)
+Ghi chi tiêu
+Tính toán chia tiền tự động (chia đều)
+Xem ai nợ bao nhiêu
