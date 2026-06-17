@@ -52,7 +52,7 @@ rental-house/
 │   │   ├── profile.js
 │   │   │      (Thông tin người dùng)
 
-│   │   └── utils.js
+│   │   └── utils.js  // chưa làm đc
 │   │          (Hàm dùng chung)
 
 ├── components/
