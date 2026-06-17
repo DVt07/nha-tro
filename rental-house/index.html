@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhà trọ</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rooms.css">
 </head>
 <body>
     <div class="page-container">
@@ -18,8 +19,8 @@
                     </div>
                 </div>
                 <div class="hero-text">
-                    <h1>Nhà trọ tiện nghi và giá tốt</h1>
-                    <p>Chọn một phòng để xem chi tiết và đặt ngay.</p>
+                    <h1>Nhà trọ tiện nghi, giá tốt</h1>
+                    <p>Chọn phòng phù hợp với ngân sách và vị trí của bạn ngay hôm nay.</p>
                 </div>
                 <div class="top-actions">
                     <a class="button secondary" href="logion and profile/login.html">Đăng nhập</a>
@@ -29,33 +30,72 @@
 
             <div class="search-row">
                 <div class="search-box">
-                    <input type="search" placeholder="Tìm kiếm phòng...">
+                    <input type="search" placeholder="Tìm kiếm phòng theo tên hoặc địa chỉ...">
                     <button class="button primary" type="button">Tìm</button>
+                </div>
+                <div class="filter-row">
+                    <button class="active" type="button">Tất cả</button>
+                    <button type="button">Dưới 2 triệu</button>
+                    <button type="button">2-4 triệu</button>
+                    <button type="button">Trên 4 triệu</button>
                 </div>
             </div>
 
             <div class="nav-toolbar">
                 <div class="filter-tabs">
-                    <button class="tab active">Tất cả</button>
-                    <button class="tab">Studio</button>
-                    <button class="tab">Tiện nghi</button>
-                    <button class="tab">Giá rẻ</button>
+                    <button class="tab active">Đại Mỗ</button>
+                    <button class="tab">Hà Đông</button>
+                    <button class="tab">Hoài Đức</button>
+                    <button class="tab">Quốc Oai</button>
                 </div>
             </div>
         </header>
 
         <main>
+            <section class="featured-rooms">
+                <h2>Phòng nổi bật</h2>
+                <div class="featured-grid">
+                    <a href="room-detail.html?room=daimo-1" class="room-card room-card-link">
+                        <img src="imgae/đại mỗ/(Căn hộ dịch vụ cao cấp)số 36 đường đại mỗ/1.jpg" alt="Căn hộ dịch vụ Đại Mỗ">
+                        <div class="room-card-content">
+                            <h3>Căn hộ dịch vụ Đại Mỗ</h3>
+                            <p>Phòng dịch vụ hiện đại, ban công và đầy đủ tiện nghi cho người đi làm.</p>
+                        </div>
+                    </a>
+                    <a href="room-detail.html?room=hoang-gia" class="room-card room-card-link">
+                        <img src="imgae/hà đông/Hoàng Gia Hotel/1.jpg" alt="Hoàng Gia Hotel">
+                        <div class="room-card-content">
+                            <h3>Hoàng Gia Hotel</h3>
+                            <p>Khách sạn mini sang trọng, vị trí thuận tiện, nhiều tiện ích xung quanh.</p>
+                        </div>
+                    </a>
+                    <a href="room-detail.html?room=valoria" class="room-card room-card-link">
+                        <img src="imgae/hoài đức/Valoria Premium Hanoi Hotel/1.jpg" alt="Valoria Premium Hanoi Hotel">
+                        <div class="room-card-content">
+                            <h3>Valoria Premium Hanoi Hotel</h3>
+                            <p>Khách sạn cao cấp, ban công riêng, dịch vụ dọn phòng định kỳ.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
             <section class="house-list">
-                <article class="card">
+                <article class="card card-featured">
+                    <div class="card-image">
+                        <img src="imgae/đại mỗ/(Căn hộ dịch vụ cao cấp)số 36 đường đại mỗ/2.jpg" alt="Phòng tiện nghi">
+                    </div>
                     <h2>Phòng đầy đủ tiện nghi</h2>
-                    <p>Phòng rộng 30m², có ban công, wifi miễn phí và bếp chung.</p>
-                    <a class="button" href="rooms.html">Xem chi tiết</a>
+                    <p>Phòng rộng 30m², có ban công, wifi miễn phí và bếp chung. Nội thất hiện đại, đầy đủ tiện ích.</p>
+                    <a class="button" href="room-detail.html?room=daimo-1">Xem chi tiết</a>
                 </article>
 
-                <article class="card">
-                    <h2>Studio cao cấp</h2>
-                    <p>Phòng studio riêng với nhà vệ sinh trong phòng, gần trung tâm.</p>
-                    <a class="button" href="rooms.html">Xem chi tiết</a>
+                <article class="card card-featured">
+                    <div class="card-image">
+                        <img src="imgae/hoài đức/Valoria Premium Hanoi Hotel/2.jpg" alt="Hotel cao cấp">
+                    </div>
+                    <h2>Hotel cao cấp</h2>
+                    <p>Phòng studio riêng với nhà vệ sinh trong phòng, gần trung tâm. Dịch vụ tuyệt vời, giá hợp lý.</p>
+                    <a class="button" href="room-detail.html?room=valoria">Xem chi tiết</a>
                 </article>
             </section>
         </main>
