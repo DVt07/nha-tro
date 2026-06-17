@@ -200,13 +200,100 @@ footer a {
     gap: 12px;
 }
 
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.nav-toolbar {
+    display: grid;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab {
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    background: #f8fafc;
+    color: #374151;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tab.active,
+.tab:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    background: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.house-list {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin-bottom: 18px;
+    color: #475569;
+}
+
+.card .button {
+    width: auto;
+    padding: 12px 18px;
+}
+
 @media (max-width: 540px) {
     .page-container {
         padding: 18px;
     }
 
     .auth-card,
-    .profile-card {
+    .profile-card,
+    .card {
         padding: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
     }
 }
