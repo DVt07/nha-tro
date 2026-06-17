@@ -1,23 +1,22 @@
  1. **Cấu trúc thư mục:**   
 rental-house/
+├── pages/
+│   ├── index.html              (Trang chủ)
+│   ├── rooms.html              (Danh sách phòng)
+│   ├── room-detail.html        (Chi tiết phòng)
+│   ├── post-room.html          (Đăng tin phòng)
 
-├── index.html              (Trang chủ)
-├── rooms.html              (Danh sách phòng)
-├── room-detail.html        (Chi tiết phòng)
-
-├── post-room.html          (Đăng tin phòng)
-
-├── groups.html             (Danh sách nhóm trọ)
-├── group-detail.html       (Chi tiết nhóm)
-
-├── expenses.html           (Quản lý chi tiêu)
-
-├── favorites.html          (Phòng yêu thích)
-
-├── profile.html            (Thông tin cá nhân)
-
-├── login.html              (Đăng nhập)
-├── register.html           (Đăng ký)
+|   ├── groups.html             (Danh sách nhóm trọ)
+|   ├── group-detail.html       (Chi tiết nhóm)
+|
+|   |── expenses.html           (Quản lý chi tiêu)
+|
+|   ├── favorites.html          (Phòng yêu thích)
+|
+|   ├── profile.html            (Thông tin cá nhân)
+|
+|   ├── login.html              (Đăng nhập)
+|   |── register.html           (Đăng ký)
 
 ├── assets/
 
