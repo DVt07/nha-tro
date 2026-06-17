@@ -12,9 +12,9 @@ rental-house/
 |   |── expenses.html           (Quản lý chi tiêu)
 |
 |   ├── favorites.html          (Phòng yêu thích)
-|
+
+|── login and profile/
 |   ├── profile.html            (Thông tin cá nhân)
-|
 |   ├── login.html              (Đăng nhập)
 |   |── register.html           (Đăng ký)
 
