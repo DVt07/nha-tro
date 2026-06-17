@@ -1,53 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental House</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="page-container">
-        <header>
-            <div class="top-actions">
-                <a class="button secondary" href="login.html">Đăng nhập</a>
-            </div>
-            <h1>Rental House</h1>
-            <p>Chọn một phòng để xem chi tiết và đặt ngay.</p>
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            <div class="nav-toolbar">
-                <div class="filter-tabs">
-                    <button class="tab active">Tất cả</button>
-                    <button class="tab">Studio</button>
-                    <button class="tab">Tiện nghi</button>
-                    <button class="tab">Giá rẻ</button>
-                </div>
-                <div class="search-box">
-                    <input type="search" placeholder="Tìm kiếm phòng...">
-                    <button class="button primary" type="button">Tìm</button>
-                </div>
-            </div>
-        </header>
+body {
+    font-family: Inter, system-ui, sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
 
-        <main>
-            <section class="house-list">
-                <article class="card">
-                    <h2>Phòng đầy đủ tiện nghi</h2>
-                    <p>Phòng rộng 30m², có ban công, wifi miễn phí và bếp chung.</p>
-                    <a class="button" href="room.html">Xem chi tiết</a>
-                </article>
+.page-container {
+    max-width: 480px;
+    margin: 32px auto;
+    padding: 24px;
+}
 
-                <article class="card">
-                    <h2>Studio cao cấp</h2>
-                    <p>Phòng studio riêng với nhà vệ sinh trong phòng, gần trung tâm.</p>
-                    <a class="button" href="room.html">Xem chi tiết</a>
-                </article>
-            </section>
-        </main>
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
 
-        <footer>
-            <p>Nhà cho thuê dễ dàng, thuận tiện và nhanh chóng.</p>
-        </footer>
-    </div>
-</body>
-</html>
+h1 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+}
+
+p {
+    color: #4b5563;
+}
+
+.auth-card,
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    padding: 24px;
+}
+
+.social-login {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.social-button.google {
+    background: #fff;
+    color: #111;
+    border: 1px solid #d1d5db;
+}
+
+.social-button.facebook {
+    background: #1877f2;
+    color: #fff;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.form-field {
+    display: block;
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 16px;
+}
+
+.form-field input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.text-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background: #111827;
+    color: #fff;
+}
+
+.button.primary {
+    background: #2563eb;
+}
+
+.button.secondary {
+    background: #f8fafc;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+.button.danger {
+    background: #dc2626;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+footer {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.avatar-placeholder {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #3730a3;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-details {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 14px;
+    color: #334155;
+}
+
+.profile-row span {
+    color: #6b7280;
+}
+
+.profile-actions {
+    display: grid;
+    gap: 12px;
+}
+
+@media (max-width: 540px) {
+    .page-container {
+        padding: 18px;
+    }
+
+    .auth-card,
+    .profile-card {
+        padding: 20px;
+    }
+}

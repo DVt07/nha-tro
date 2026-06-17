@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <div class="page-container">
         <header>
             <h1>Đăng nhập</h1>
-            <p>Đăng nhập bằng Google, Facebook hoặc tài khoản ảo dùng thử.</p>
+            <p>Đăng nhập bằng Google, Facebook hoặc tài khoản hiện có.</p>
         </header>
 
         <main>
@@ -23,23 +23,24 @@
                 <div class="separator"><span>hoặc</span></div>
 
                 <form class="login-form">
-                    <label>
-                        Email hoặc số điện thoại
-                        <input type="text" placeholder="vd: user@example.com">
+                    <label class="form-field">
+                        Username hoặc Email
+                        <input type="text" placeholder="Username hoặc email">
                     </label>
-                    <label>
+                    <label class="form-field">
                         Mật khẩu
                         <input type="password" placeholder="Mật khẩu">
                     </label>
+                    <div class="form-footer">
+                        <a class="text-link" href="#">Quên mật khẩu?</a>
+                    </div>
                     <button class="button primary" type="submit">Đăng nhập</button>
                 </form>
-
-                
             </section>
         </main>
 
         <footer>
-            <p>Chưa có tài khoản? Bạn có thể dùng tài khoản ảo hoặc quay lại trang chính.</p>
+            <p>Chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
         </footer>
     </div>
 </body>

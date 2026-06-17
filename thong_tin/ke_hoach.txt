@@ -1,44 +1,116 @@
  1. **Cấu trúc thư mục:**   
 rental-house/
-├── index.html                 (Trang chủ)
-├── rooms.html                 (Danh sách phòng)
-├── room-detail.html           ( chi tiết)
-├── post-room.html             (Đăng tin)
-├── groups.html                (Trang nhóm trọ)
-├── group-detail.html          (chi tiết nhóm )
-├── login.html                  (đăng nhập )
+
+├── index.html              (Trang chủ)
+├── rooms.html              (Danh sách phòng)
+├── room-detail.html        (Chi tiết phòng)
+
+├── post-room.html          (Đăng tin phòng)
+
+├── groups.html             (Danh sách nhóm trọ)
+├── group-detail.html       (Chi tiết nhóm)
+
+├── expenses.html           (Quản lý chi tiêu)
+
+├── favorites.html          (Phòng yêu thích)
+
+├── profile.html            (Thông tin cá nhân)
+
+├── login.html              (Đăng nhập)
+├── register.html           (Đăng ký)
+
 ├── assets/
+
 │   ├── css/
-│   │   └── style.css
-│   └── js/
-│       ├── data.js            (Dữ liệu mẫu + quản lý localStorage) chưa làm đc 
-│       ├── auth.js             (giá )
-│       ├── rooms.js            (phòng )
-│       ├── groups.js     
-│       ├── expenses.js
-│       └── utils.js
-├── components/                (HTML tái sử dụng)
+│   │   ├── style.css
+│   │   ├── rooms.css
+│   │   ├── groups.css
+│   │   └── expenses.css
+
+│   ├── js/
+
+│   │   ├── data.js
+│   │   │      (Dữ liệu mẫu + localStorage)
+
+│   │   ├── auth.js
+│   │   │      (Đăng nhập/Đăng ký)
+
+│   │   ├── rooms.js
+│   │   │      (Hiển thị phòng)
+
+│   │   ├── room-detail.js
+│   │   │      (Chi tiết phòng)
+
+│   │   ├── groups.js
+│   │   │      (Quản lý nhóm)
+
+│   │   ├── expenses.js
+│   │   │      (Quản lý chi tiêu)
+
+│   │   ├── favorites.js
+│   │   │      (Lưu phòng yêu thích)
+
+│   │   ├── profile.js
+│   │   │      (Thông tin người dùng)
+
+│   │   └── utils.js
+│   │          (Hàm dùng chung)
+
+├── components/
+
 │   ├── navbar.html
-│   └── sidebar.html
-└── images/                    (ảnh mẫu)
+│   ├── sidebar.html
+│   └── footer.html
 
-2 . **Chức năng chính:**
-1. Auth (Giả)
+├── images/
+│
+└── README.md
 
-Đăng ký / Đăng nhập (lưu thông tin vào localStorage)
-Phân quyền: Người thuê / Chủ nhà
+2 . **Chức năng chính:** 🚀
+=========================================================
+           KẾ HOẠCH DỰ ÁN QUẢN LÝ NHÀ TRỌ
+=========================================================
 
-2. Tìm nhà trọ
-
-Danh sách phòng (card)
-Lọc theo giá, quận, tiện ích
-Xem chi tiết
-Lưu tin yêu thích
-
-3. Quản lý nhóm trọ
-
-Tạo nhóm
-Thêm thành viên (giả)
-Ghi chi tiêu
-Tính toán chia tiền tự động (chia đều)
-Xem ai nợ bao nhiêu
++----------------------+--------------------------------+
+| CHỨC NĂNG            | MÔ TẢ                          |
++----------------------+--------------------------------+
+| Tài khoản            | Đăng ký                        |
+|                      | Đăng nhập                      |
+|                      | Đăng xuất                      |
+|                      | Chỉnh sửa hồ sơ                |
++----------------------+--------------------------------+
+| Quản lý phòng trọ    | Xem danh sách phòng            |
+|                      | Tìm kiếm phòng                 |
+|                      | Lọc giá                        |
+|                      | Lọc khu vực                    |
+|                      | Lọc tiện ích                   |
+|                      | Xem chi tiết phòng             |
+|                      | Đăng phòng                     |
+|                      | Sửa phòng                      |
+|                      | Xóa phòng                      |
++----------------------+--------------------------------+
+| Phòng yêu thích      | Lưu phòng                      |
+|                      | Hủy lưu phòng                  |
+|                      | Xem danh sách đã lưu           |
++----------------------+--------------------------------+
+| Nhóm trọ             | Tạo nhóm                       |
+|                      | Chỉnh sửa nhóm                 |
+|                      | Thêm thành viên                |
+|                      | Xóa thành viên                 |
+|                      | Quản lý trưởng nhóm            |
++----------------------+--------------------------------+
+| Quản lý chi tiêu     | Thêm khoản chi                 |
+|                      | Sửa khoản chi                  |
+|                      | Xóa khoản chi                  |
+|                      | Tiền phòng                     |
+|                      | Tiền điện                      |
+|                      | Tiền nước                      |
+|                      | Internet                       |
+|                      | Chi tiêu khác                  |
+|                      | Tính chi phí mỗi người         |
+|                      | Thống kê tổng chi phí          |
++----------------------+--------------------------------+
+| Chức năng nâng cao   | Đánh giá phòng                 |
+|                      | Thông báo                      |
+|                      | Dashboard Admin                |
++----------------------+--------------------------------+
