@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Group Detail</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/groups.css">
+</head>
+<body class="page-container room-detail-page">
+  <header>
+    <a href="groups.html" class="text-link">← Quay lại Groups</a>
+    <h1 id="group-title">Group Detail</h1>
+  </header>
+
+  <main>
+    <section class="group-summary">
+      <div class="group-info">
+        <h2 id="group-name">Tên nhóm</h2>
+        <p id="group-desc">Mô tả nhóm ngắn... </p>
+        <p class="group-meta">Trưởng nhóm: <strong id="group-leader">Tên trưởng nhóm</strong></p>
+      </div>
+      <div class="group-controls">
+        <button class="button primary" id="add-member">Thêm thành viên</button>
+        <button class="button" id="edit-group">Chỉnh sửa thông tin nhóm</button>
+        <button class="button danger" id="leave-group">Rời nhóm</button>
+      </div>
+    </section>
+
+    <section class="group-members">
+      <h3>Danh sách thành viên</h3>
+      <ul class="members-list">
+        <li>Minh <span class="role">(Trưởng nhóm)</span> <button class="button secondary small">Xóa</button></li>
+        <li>Lan <button class="button secondary small">Xóa</button></li>
+        <li>Huy <button class="button secondary small">Xóa</button></li>
+      </ul>
+    </section>
+
+    <section class="group-expenses">
+      <h3>Danh sách chi tiêu</h3>
+      <table class="expenses-table">
+        <thead>
+          <tr><th>Ngày</th><th>Mục</th><th>Số tiền</th><th>Người chi</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2026-06-01</td><td>Tiền điện</td><td>500.000đ</td><td>Minh</td><td><button class="button secondary small">Xóa</button></td></tr>
+          <tr><td>2026-06-05</td><td>Thêm nệm</td><td>1.200.000đ</td><td>Lan</td><td><button class="button secondary small">Xóa</button></td></tr>
+        </tbody>
+      </table>
+      <button class="button" id="add-expense">Thêm chi tiêu</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Quản lý thông tin nhóm</p>
+  </footer>
+
+</body>
+</html>

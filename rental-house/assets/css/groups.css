@@ -1,0 +1,134 @@
+/* Styles for groups and group-detail pages */
+
+.groups-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.groups-actions .action-left {
+  display: flex;
+  gap: 10px;
+}
+
+.groups-actions .action-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  min-width: 220px;
+}
+
+.groups-list .list-groups {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.group-main {
+  display: grid;
+  gap: 6px;
+}
+
+.group-name {
+  font-size: 1.05rem;
+}
+
+.group-meta {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.group-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.group-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.group-info {
+  max-width: 720px;
+}
+
+.group-controls {
+  display: grid;
+  gap: 10px;
+}
+
+.members-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.members-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.role {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+.small {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+}
+
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.expenses-table th,
+.expenses-table td {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .groups-actions,
+  .group-summary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .group-controls {
+    grid-auto-flow: row;
+  }
+}

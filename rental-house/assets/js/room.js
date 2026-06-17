@@ -136,21 +136,19 @@
 ];
 
 const listingContainer = document.getElementById('listings');
-const detailImage = document.querySelector('.room-detail-page .room-hero-image');
-const detailTitle = document.getElementById('room-title');
-const detailDescription = document.getElementById('room-description');
-const detailFullDescription = document.getElementById('room-full-description');
-const detailSummary = document.getElementById('room-summary');
-const detailFeatures = document.getElementById('room-features');
-const detailGallery = document.getElementById('room-gallery');
 
 function formatFeatureItem(name, value) {
   return `<span><strong>${name}</strong><em>${value}</em></span>`;
 }
 
-function renderRoomList() {
+function getRoomById(id) {
+  return rooms.find(r => r.id === id);
+}
+
+// Render list of rooms. Accept an optional array to render filtered results.
+function renderRoomList(list = rooms) {
   if (!listingContainer) return;
-  listingContainer.innerHTML = rooms.map(room => {
+  listingContainer.innerHTML = list.map(room => {
     return `
       <article class="listing-card">
         <img class="listing-image" src="${room.images[0]}" alt="${room.title}">
@@ -163,7 +161,10 @@ function renderRoomList() {
             <span><strong>Địa chỉ:</strong><em>${room.location}</em></span>
           </div>
           <div class="listing-tag">${room.type}</div>
-          <a class="button" href="room-detail.html?room=${room.id}">Xem chi tiết</a>
+          <div class="listing-actions">
+            <a class="button" href="room-detail.html?room=${room.id}">Xem chi tiết</a>
+            <button class="button secondary favorite-btn" data-id="${room.id}" aria-pressed="false">♡ Yêu thích</button>
+          </div>
         </div>
       </article>
     `;
@@ -206,5 +207,11 @@ function renderRoomDetail() {
   }
 }
 
+// expose helper to other scripts
+window.getRoomById = getRoomById;
+window.renderRoomList = renderRoomList;
+// expose rooms array for filters and other scripts
+window.rooms = rooms;
+
+// initial render for pages that use listing
 renderRoomList();
-renderRoomDetail();

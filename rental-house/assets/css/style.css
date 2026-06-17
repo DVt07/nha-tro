@@ -347,6 +347,63 @@ footer a {
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
+/* Compact filters: price select + type pills */
+.compact-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.compact-filters .filter-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+.filter-right {
+    display: flex;
+    gap: 8px;
+}
+
+.type-pill {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background: #f8fafc;
+    color: #374151;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.type-pill.active,
+.type-pill:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.favorite-btn, .detail-favorite-btn {
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+.favorite-btn.favorited, .detail-favorite-btn.favorited {
+    background: #ff6b6b;
+    color: #fff;
+    border-color: #ff6b6b;
+}
+
 .search-bar input {
     width: 100%;
     padding: 14px 16px;

@@ -30,23 +30,31 @@
 
             <div class="search-row">
                 <div class="search-box">
-                    <input type="search" placeholder="Tìm kiếm phòng theo tên hoặc địa chỉ...">
+                    <input type="search" placeholder="Tìm kiếm địa chỉ...">
                     <button class="button primary" type="button">Tìm</button>
-                </div>
-                <div class="filter-row">
-                    <button class="active" type="button">Tất cả</button>
-                    <button type="button">Dưới 2 triệu</button>
-                    <button type="button">2-4 triệu</button>
-                    <button type="button">Trên 4 triệu</button>
                 </div>
             </div>
 
-            <div class="nav-toolbar">
-                <div class="filter-tabs">
-                    <button class="tab active">Đại Mỗ</button>
-                    <button class="tab">Hà Đông</button>
-                    <button class="tab">Hoài Đức</button>
-                    <button class="tab">Quốc Oai</button>
+            <div class="compact-filters">
+                <div class="filter-left">
+                    <select id="location-select" class="filter-select" aria-label="Khu vực">
+                        <option value="all">Khu vực</option>
+                        <option value="dai-mo">Đại Mỗ</option>
+                        <option value="ha-dong">Hà Đông</option>
+                        <option value="hoai-duc">Hoài Đức</option>
+                        <option value="quoc-oai">Quốc Oai</option>
+                    </select>
+                    <select id="price-select" class="filter-select" aria-label="Khoảng giá">
+                        <option value="all">Khoảng giá</option>
+                        <option value="under-2">Dưới 2 triệu</option>
+                        <option value="2-4">2-4 triệu</option>
+                        <option value="over-4">Trên 4 triệu</option>
+                    </select>
+                </div>
+                <div class="filter-right">
+                    <button class="type-pill active">Tất cả</button>
+                    <button class="type-pill">Nhà trọ</button>
+                    <button class="type-pill">Khách sạn</button>
                 </div>
             </div>
         </header>
@@ -104,5 +112,9 @@
             <p>Nhà cho thuê dễ dàng, thuận tiện và nhanh chóng.</p>
         </footer>
     </div>
+    <script src="assets/js/room.js"></script>
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/room-detail.js"></script>
 </body>
 </html>
