@@ -200,16 +200,39 @@ footer a {
     gap: 12px;
 }
 
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
 .top-actions {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 24px;
+    gap: 12px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.top-actions .button {
+    width: auto;
+    padding: 10px 16px;
+}
+
+.hero-text {
+    max-width: 70%;
+}
+
+.search-row {
+    margin-bottom: 20px;
 }
 
 .nav-toolbar {
     display: grid;
     gap: 18px;
-    margin-top: 24px;
+    margin-top: 8px;
 }
 
 .filter-tabs {
