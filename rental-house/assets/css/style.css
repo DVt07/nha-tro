@@ -222,6 +222,36 @@ footer a {
     flex-wrap: wrap;
 }
 
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
 .top-actions .button {
     width: auto;
     padding: 10px 16px;
