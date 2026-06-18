@@ -19,6 +19,7 @@
     const detailImage = document.querySelector('.room-detail-page .room-hero-image');
     const detailTitle = document.getElementById('room-title');
     const detailDescription = document.getElementById('room-description');
+    const detailPromotion = document.getElementById('room-promotion');
     const detailFullDescription = document.getElementById('room-full-description');
     const detailSummary = document.getElementById('room-summary');
     const detailFeatures = document.getElementById('room-features');
@@ -36,6 +37,15 @@
         formatFeatureItem('Địa chỉ', room.location),
         formatFeatureItem('Loại phòng', room.type)
       ].join('');
+    }
+
+    if (detailPromotion) {
+      if (room.promotion) {
+        detailPromotion.textContent = room.promotion;
+        detailPromotion.classList.remove('hidden');
+      } else {
+        detailPromotion.classList.add('hidden');
+      }
     }
 
     if (detailFeatures) {

@@ -255,6 +255,19 @@ footer a {
 .top-actions .button {
     width: auto;
     padding: 10px 16px;
+    min-width: 110px;
+}
+
+.top-actions .button.management {
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+
+.top-actions .button.management:hover {
+    background: #f8fafc;
+    border-color: #a5b4fc;
 }
 
 .hero-text {
@@ -497,6 +510,38 @@ footer a {
     color: #111827;
 }
 
+.listing-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.listing-card {
+    position: relative;
+}
+
+.room-promotion {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 18px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+.room-promotion.hidden {
+    display: none;
+}
+
 .room-card-content p {
     font-size: 0.9rem;
     color: #6b7280;
@@ -511,6 +556,120 @@ footer a {
 
 .room-card-link:hover .room-card-content h3 {
     color: #2563eb;
+}
+
+/* Category Menu */
+.category-menu {
+    display: flex;
+    gap: 0;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 -24px;
+    padding: 0 24px;
+}
+
+.category-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    border-bottom: 3px solid transparent;
+    font-size: 13px;
+    color: #6b7280;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.category-item:hover {
+    background-color: #f9fafb;
+    color: #374151;
+}
+
+.category-item.active {
+    border-bottom-color: #2563eb;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.category-item.management-category {
+    margin-left: auto;
+}
+
+.category-item.management-category:hover {
+    background-color: #eff6ff;
+}
+
+.category-icon {
+    font-size: 22px;
+}
+
+.management-menu {
+    margin-bottom: 48px;
+}
+
+.management-menu h2 {
+    font-size: 1.75rem;
+    margin-bottom: 28px;
+    color: #0f172a;
+}
+
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.management-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.management-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+    border-color: #2563eb;
+}
+
+.management-icon {
+    font-size: 2.5rem;
+}
+
+.management-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #0f172a;
+}
+
+.management-card p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .card-featured {

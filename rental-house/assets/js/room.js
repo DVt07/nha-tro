@@ -25,7 +25,8 @@
     id: "hoang-gia",
     title: "Hoàng Gia Hotel",
     type: "Khách sạn mini",
-    price: "6 triệu/tháng", // để thêm 1 đêm 500 1 đêm
+    promotion: "Giảm 15% cho đặt trước 7 ngày",
+    price: "6 triệu/tháng",
     area: "32 m²",
     location: "Hà Đông, Hà Nội",
     description: "Phòng khách sạn mini sang trọng, nội thất gỗ, view đẹp và vị trí thuận tiện ở Hà Đông.",
@@ -49,6 +50,7 @@
     id: "valoria",
     title: "Valoria Premium Hanoi Hotel",
     type: "Khách sạn cao cấp",
+    promotion: "Tặng bữa sáng miễn phí cho khách mới",
     price: "20 triệu/tháng",
     area: "30 m²",
     location: "Hoài Đức, Hà Nội",
@@ -152,6 +154,7 @@ function renderRoomList(list = rooms) {
     return `
       <article class="listing-card">
         <img class="listing-image" src="${room.images[0]}" alt="${room.title}">
+        ${room.promotion ? `<div class="listing-badge">Khuyến mại</div>` : ''}
         <div class="listing-info">
           <h3>${room.title}</h3>
           <p>${room.description}</p>

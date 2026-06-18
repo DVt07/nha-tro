@@ -36,18 +36,76 @@
       </ul>
     </section>
 
+    <section class="group-utilities">
+      <div class="utilities-header">
+        <div>
+          <h3>Quản lý dịch vụ tiện ích</h3>
+          <p class="utilities-summary">Hiển thị chi phí điện, nước, internet theo ngày, tuần và tháng.</p>
+        </div>
+      </div>
+
+      <table class="utilities-table">
+        <thead>
+          <tr><th>Dịch vụ</th><th>Ngày</th><th>Tuần</th><th>Tháng</th><th>Hành động</th></tr>
+        </thead>
+        <tbody id="utilities-tbody"></tbody>
+      </table>
+
+      <div class="utilities-empty hidden" id="utilities-empty">Không có thông tin dịch vụ.</div>
+    </section>
+
     <section class="group-expenses">
-      <h3>Danh sách chi tiêu</h3>
+      <div class="expenses-header">
+        <div>
+          <h3>Danh sách chi tiêu</h3>
+          <p class="expenses-summary">Tổng chi tiêu: <strong id="expenses-total">0đ</strong></p>
+        </div>
+        <div class="expenses-actions">
+          <input id="expense-search" class="search-input" type="search" placeholder="Tìm kiếm theo ngày, mục hoặc người chi">
+          <button class="button primary" id="add-expense">Thêm chi tiêu</button>
+        </div>
+      </div>
+
       <table class="expenses-table">
         <thead>
           <tr><th>Ngày</th><th>Mục</th><th>Số tiền</th><th>Người chi</th><th></th></tr>
         </thead>
-        <tbody>
-          <tr><td>2026-06-01</td><td>Tiền điện</td><td>500.000đ</td><td>Minh</td><td><button class="button secondary small">Xóa</button></td></tr>
-          <tr><td>2026-06-05</td><td>Thêm nệm</td><td>1.200.000đ</td><td>Lan</td><td><button class="button secondary small">Xóa</button></td></tr>
-        </tbody>
+        <tbody id="expenses-tbody"></tbody>
       </table>
-      <button class="button" id="add-expense">Thêm chi tiêu</button>
+
+      <div class="expense-empty hidden" id="expense-empty">Không có chi phí. Nhấn "Thêm chi tiêu" để bắt đầu.</div>
+
+      <div class="modal-overlay hidden" id="expense-modal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="expense-modal-title">
+          <div class="modal-header">
+            <h4 id="expense-modal-title">Thêm chi tiêu</h4>
+            <button class="button secondary small" type="button" id="close-expense-modal">×</button>
+          </div>
+          <form id="expense-form">
+            <input type="hidden" id="expense-id">
+            <label>
+              Ngày
+              <input type="date" id="expense-date" required>
+            </label>
+            <label>
+              Mục chi
+              <input type="text" id="expense-item" placeholder="Tiền điện, nước..." required>
+            </label>
+            <label>
+              Số tiền
+              <input type="number" id="expense-amount" min="0" placeholder="1200000" required>
+            </label>
+            <label>
+              Người chi
+              <input type="text" id="expense-payer" placeholder="Tên người chi" required>
+            </label>
+            <div class="modal-actions">
+              <button class="button primary" type="submit">Lưu</button>
+              <button class="button secondary" type="button" id="cancel-expense">Hủy</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -56,5 +114,6 @@
     <p>Quản lý thông tin nhóm</p>
   </footer>
 
+  <script src="../assets/js/expenses.js"></script>
 </body>
 </html>
