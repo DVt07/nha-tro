@@ -46,18 +46,15 @@ rental-house/
 │   │   ├── expenses.js
 │   │   │      (Quản lý chi tiêu)
 
-│   │   ├── favorites.js
-│   │   │      (Lưu phòng yêu thích)
-
 │   │   ├── profile.js
 │   │   │      (Thông tin người dùng)
 
-│   │   └── utils.js  // chưa làm đc
+│   │   └── utils.js                    // chưa làm đc
 │   │          (Hàm dùng chung)
 
 ├── components/
 
-│   ├── navbar.html
+│   ├── navbar.html      *    
 │   ├── sidebar.html
 │   └── footer.html
 

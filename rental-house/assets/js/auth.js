@@ -212,4 +212,37 @@ function initAuth() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initAuth);
+function updateTopActions() {
+  const currentUser = AuthStorage.getCurrentUser();
+  const topActions = document.getElementById('top-actions');
+  if (!topActions) return;
+
+  if (currentUser) {
+    const initial = (currentUser.fullName || currentUser.username).charAt(0).toUpperCase();
+    topActions.innerHTML = `
+      <div class="user-info">
+        <div class="header-avatar">${initial}</div>
+        <span><strong>${currentUser.fullName || currentUser.username}</strong></span>
+      </div>
+      <a class="button secondary" href="logion and profile/profile.html">Hồ sơ</a>
+      <button class="button" type="button" onclick="logout()">Đăng xuất</button>
+    `;
+  } else {
+    topActions.innerHTML = `
+      <a class="button secondary" href="logion and profile/login.html">Đăng nhập</a>
+      <a class="button primary" href="logion and profile/register.html">Đăng ký</a>
+    `;
+  }
+}
+
+function logout() {
+  AuthStorage.clearCurrentUser();
+  updateTopActions();
+  // reload to refresh page-specific state
+  window.location.reload();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initAuth();
+  updateTopActions();
+});
