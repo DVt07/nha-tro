@@ -1,0 +1,49 @@
+BÁO CÁO TIẾN ĐỘ DỰ ÁN QUẢN LÝ NHÀ TRỌ
+
+Tên dự án: Website Quản Lý Nhà Trọ
+Kho lưu trữ GitHub: https://github.com/DVt07/nha-tro
+
+1. Mục tiêu dự án
+- Xây dựng website hỗ trợ quản lý nhà trọ.
+- Quản lý thông tin phòng trọ.
+- Quản lý người thuê.
+- Quản lý chi phí điện, nước và các khoản phát sinh.
+- Hỗ trợ đăng nhập và quản lý tài khoản người dùng.
+
+2. Công việc đã thực hiện
+- Tạo Repository trên GitHub.
+- Thiết lập cấu trúc thư mục dự án.
+- Xây dựng giao diện trang chủ (index.html).
+- Xây dựng trang danh sách phòng trọ (rooms.html).
+- Xây dựng trang chi tiết phòng (room-detail.html).
+- Xây dựng trang đăng bài cho thuê phòng (post-room.html).
+- Xây dựng giao diện đăng nhập (login.html).
+- Xây dựng giao diện quản lý chi phí (expenses.html).
+- Commit và Push mã nguồn lên GitHub.
+
+3. Công cụ sử dụng
+- Visual Studio Code.
+- Git.
+- GitHub.
+- HTML, CSS, JavaScript.
+
+4. Khó khăn gặp phải
+- Xung đột mã nguồn (Merge Conflict) khi làm việc nhóm.
+- Đồng bộ dữ liệu giữa các thành viên chưa nhất quán.
+- Một số lỗi giao diện trên các trang web.
+
+5. Cách xử lý
+- Sử dụng Git Pull trước khi Push.
+- Kiểm tra và giải quyết Merge Conflict thủ công.
+- Thường xuyên Commit với nội dung rõ ràng.
+- Trao đổi với các thành viên trước khi sửa cùng một file.
+
+6. Kế hoạch tiếp theo
+- Hoàn thiện chức năng đăng nhập.
+- Hoàn thiện quản lý phòng trọ.
+- Bổ sung chức năng tìm kiếm phòng.
+- Kiểm tra và sửa lỗi giao diện.
+- Hoàn thiện báo cáo dự án.
+
+7. Kết luận
+Dự án đã hoàn thành phần lớn giao diện và cấu trúc chức năng cơ bản. Trong thời gian tới sẽ tập trung hoàn thiện các chức năng còn thiếu, kiểm thử và tối ưu hệ thống trước khi nghiệm thu.

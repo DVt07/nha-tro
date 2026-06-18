@@ -1,44 +1,64 @@
  1. **Cấu trúc thư mục:**   
 rental-house/
-├── index.html                 (Trang chủ)
-├── rooms.html                 (Danh sách phòng)
-├── room-detail.html           ( chi tiết)
-├── post-room.html             (Đăng tin)
-├── groups.html                (Trang nhóm trọ)
-├── group-detail.html          (chi tiết nhóm )
-├── login.html                  (đăng nhập )
+├── pages/
+│   ├── index.html              (Trang chủ)
+│   ├── rooms.html              (Danh sách phòng)
+│   ├── room-detail.html        (Chi tiết phòng)
+│   ├── post-room.html          (Đăng tin phòng)
+
+|   ├── groups.html             (Danh sách nhóm trọ)
+|   ├── group-detail.html       (Chi tiết nhóm)
+|
+|   |── expenses.html           (Quản lý chi tiêu)
+|
+|   ├── favorites.html          (Phòng yêu thích)
+
+|── login and profile/
+|   ├── profile.html            (Thông tin cá nhân)
+|   ├── login.html              (Đăng nhập)
+|   |── register.html           (Đăng ký)
+
 ├── assets/
+
 │   ├── css/
-│   │   └── style.css
-│   └── js/
-│       ├── data.js            (Dữ liệu mẫu + quản lý localStorage) chưa làm đc 
-│       ├── auth.js             (giá )
-│       ├── rooms.js            (phòng )
-│       ├── groups.js     
-│       ├── expenses.js
-│       └── utils.js
-├── components/                (HTML tái sử dụng)
-│   ├── navbar.html
-│   └── sidebar.html
-└── images/                    (ảnh mẫu)
+│   │   ├── style.css
+│   │   ├── rooms.css
+│   │   ├── groups.css
+│   │   └── expenses.css
 
-2 . **Chức năng chính:**
-1. Auth (Giả)
+│   ├── js/
 
-Đăng ký / Đăng nhập (lưu thông tin vào localStorage)
-Phân quyền: Người thuê / Chủ nhà
+│   │   ├── data.js
+│   │   │      (Dữ liệu mẫu + localStorage)
 
-2. Tìm nhà trọ
+│   │   ├── auth.js
+│   │   │      (Đăng nhập/Đăng ký)
 
-Danh sách phòng (card)
-Lọc theo giá, quận, tiện ích
-Xem chi tiết
-Lưu tin yêu thích
+│   │   ├── rooms.js
+│   │   │      (Hiển thị phòng)
 
-3. Quản lý nhóm trọ
+│   │   ├── room-detail.js
+│   │   │      (Chi tiết phòng)
 
-Tạo nhóm
-Thêm thành viên (giả)
-Ghi chi tiêu
-Tính toán chia tiền tự động (chia đều)
-Xem ai nợ bao nhiêu
+│   │   ├── groups.js
+│   │   │      (Quản lý nhóm)
+
+│   │   ├── expenses.js
+│   │   │      (Quản lý chi tiêu)
+
+│   │   ├── profile.js
+│   │   │      (Thông tin người dùng)
+
+│   │   └── utils.js                    // chưa làm đc
+│   │          (Hàm dùng chung)
+
+├── components/
+
+│   ├── navbar.html      *    
+│   ├── sidebar.html
+│   └── footer.html
+
+├── images/
+│
+└── README.md
+

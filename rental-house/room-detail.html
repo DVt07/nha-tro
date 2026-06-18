@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết phòng</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <div class="page-container room-detail-page">
+        <main>
+            <section class="room-detail-header">
+                <div class="room-hero-card">
+                    <img class="room-hero-image" src="" alt="Phòng" />
+                    <div class="room-hero-content">
+                        <h1 id="room-title">Phòng</h1>
+                        <p id="room-description">Thông tin phòng sẽ được hiển thị ở đây.</p>
+                        <div class="room-hero-actions">
+                            <a class="button primary" href="rooms.html">Quay lại danh sách</a>
+                            <a class="button secondary" href="index.html">Về trang chủ</a>
+                        </div>
+                        <div id="detail-favorite-container" style="margin-top:12px"></div>
+                    </div>
+                </div>
+
+                <aside class="property-summary">
+                    <h2>Thông tin nhanh</h2>
+                    <div class="property-details" id="room-summary"></div>
+                </aside>
+            </section>
+
+            <section class="room-detail-grid">
+                <div class="property-summary">
+                    <h2>Mô tả chi tiết</h2>
+                    <p id="room-full-description">Chi tiết phòng sẽ được hiển thị ở đây.</p>
+                    <div class="property-details" id="room-features"></div>
+                </div>
+                <div class="gallery-grid" id="room-gallery"></div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/room.js"></script>
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/room-detail.js"></script>
+</body>
+</html>

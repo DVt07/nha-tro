@@ -1,0 +1,47 @@
+                            =========================================================
+                                        KẾ HOẠCH DỰ ÁN QUẢN LÝ NHÀ TRỌ
+                            =========================================================
+
+                +----------------------+-------------------------+--------------------------------------+
+                | CHỨC NĂNG            | TÍNH NĂNG               | GIẢI THÍCH                           |
+                +----------------------+-------------------------+--------------------------------------+
+                | 1.Tài khoản          | 1.1Đăng ký              | Tạo tài khoản mới                    |
+                |                      | 1.2Đăng nhập            | Truy cập vào hệ thống                |
+                |                      | 1.3Đăng xuất            | Thoát khỏi tài khoản                 |
+                |                      | 1.4Chỉnh sửa hồ sơ      | Cập nhật thông tin cá nhân           |
+                +----------------------+----------------------+-----------------------------------------+
+                | 2.Quản lý phòng      | 2.1Xem danh sách phòng  | Hiển thị các phòng đang đăng         |
+                |   trọ                | 2.2Tìm kiếm phòng       | Tìm phòng theo từ khóa               |
+                |                      | 2.3Lọc giá              | Lọc theo mức giá thuê                |
+                |                      | 2.4Lọc khu vực          | Lọc theo địa chỉ/khu vực             |
+                |                      | 2.5Lọc tiện ích         | Lọc theo tiện nghi phòng             |
+                |                      | 2.6Xem chi tiết phòng   | Xem đầy đủ thông tin phòng           |
+                |                      | 2.7Đăng phòng           | Tạo bài đăng phòng mới               |
+                |                      | 2.8Sửa phòng            | Cập nhật thông tin phòng             |
+                |                      | 2.9Xóa phòng            | Gỡ bài đăng phòng                    |
+                +----------------------+-------------------------+--------------------------------------+
+                | 3.Phòng yêu thích    | 3.1Lưu phòng            | Thêm phòng vào danh sách yêu thích   |
+                |                      | 3.2Hủy lưu phòng        | Xóa khỏi danh sách yêu thích         |
+                |                      | 3.3Xem danh sách đã lưu | Xem các phòng đã đánh dấu            |
+                +----------------------+-------------------------+--------------------------------------+
+                | 4.Nhóm trọ           | 4.1Tạo nhóm             | Tạo nhóm cho người cùng phòng        |
+                |                      | 4.2Chỉnh sửa nhóm       | Thay đổi thông tin nhóm              |
+                |                      | 4.3Thêm thành viên      | Mời người vào nhóm                   |
+                |                      | 4.4Xóa thành viên       | Loại thành viên khỏi nhóm            |
+                |                      | 4.5Quản lý trưởng nhóm  | Phân quyền trưởng nhóm               |
+                +----------------------+-------------------------+--------------------------------------+
+                | 5.Quản lý chi tiêu   | 5.1Thêm khoản chi       | Ghi nhận khoản chi mới               |
+                |                      | 5.2Sửa khoản chi        | Cập nhật khoản chi                   |
+                |                      | 5.3Xóa khoản chi        | Xóa khoản chi không cần thiết        |
+                |                      | 5.4Tiền phòng           | Quản lý chi phí tiền thuê            |
+                |                      | 5.5Tiền điện            | Quản lý chi phí điện                 |
+                |                      | 5.6Tiền nước            | Quản lý chi phí nước                 |
+                |                      | 5.7Internet             | Quản lý chi phí mạng                 |
+                |                      | 5.8Chi tiêu khác        | Các khoản phát sinh khác             |
+                |                      | 5.9Tính chi phí/người   | Chia đều chi phí cho thành viên      |
+                |                      | 5.10Thống kê chi phí    | Tổng hợp chi tiêu theo thời gian     |
+                +----------------------+-------------------------+--------------------------------------+
+                | 6.Chức năng nâng cao | 6.1Đánh giá phòng       | Nhận xét và chấm điểm phòng          |
+                |                      | 6.2Thông báo            | Gửi thông báo đến người dùng         |
+                |                      | 6.3Dashboard Admin      | Quản trị hệ thống                    |
+                +----------------------+-------------------------+--------------------------------------+

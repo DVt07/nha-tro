@@ -1,53 +1,568 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental House</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="page-container">
-        <header>
-            <div class="top-actions">
-                <a class="button secondary" href="login.html">Đăng nhập</a>
-            </div>
-            <h1>Rental House</h1>
-            <p>Chọn một phòng để xem chi tiết và đặt ngay.</p>
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            <div class="nav-toolbar">
-                <div class="filter-tabs">
-                    <button class="tab active">Tất cả</button>
-                    <button class="tab">Studio</button>
-                    <button class="tab">Tiện nghi</button>
-                    <button class="tab">Giá rẻ</button>
-                </div>
-                <div class="search-box">
-                    <input type="search" placeholder="Tìm kiếm phòng...">
-                    <button class="button primary" type="button">Tìm</button>
-                </div>
-            </div>
-        </header>
+body {
+    font-family: Inter, system-ui, sans-serif;
+    background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+}
 
-        <main>
-            <section class="house-list">
-                <article class="card">
-                    <h2>Phòng đầy đủ tiện nghi</h2>
-                    <p>Phòng rộng 30m², có ban công, wifi miễn phí và bếp chung.</p>
-                    <a class="button" href="room.html">Xem chi tiết</a>
-                </article>
+.page-container {
+    max-width: 960px;
+    margin: 32px auto;
+    padding: 24px;
+}
 
-                <article class="card">
-                    <h2>Studio cao cấp</h2>
-                    <p>Phòng studio riêng với nhà vệ sinh trong phòng, gần trung tâm.</p>
-                    <a class="button" href="room.html">Xem chi tiết</a>
-                </article>
-            </section>
-        </main>
+.page-container.rooms-page,
+.page-container.room-detail-page {
+    max-width: 1080px;
+}
 
-        <footer>
-            <p>Nhà cho thuê dễ dàng, thuận tiện và nhanh chóng.</p>
-        </footer>
-    </div>
-</body>
-</html>
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+}
+
+p {
+    color: #4b5563;
+}
+
+.auth-card,
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    padding: 24px;
+}
+
+.social-login {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.social-button.google {
+    background: #fff;
+    color: #111;
+    border: 1px solid #d1d5db;
+}
+
+.social-button.facebook {
+    background: #1877f2;
+    color: #fff;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.form-field {
+    display: block;
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 16px;
+}
+
+.form-field input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.text-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background: #111827;
+    color: #fff;
+}
+
+.button.primary {
+    background: #2563eb;
+}
+
+.button.secondary {
+    background: #f8fafc;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+.button.danger {
+    background: #dc2626;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+footer {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.avatar-placeholder {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #3730a3;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-details {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 14px;
+    color: #334155;
+}
+
+.profile-row span {
+    color: #6b7280;
+}
+
+.profile-actions {
+    display: grid;
+    gap: 12px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.top-actions .button {
+    width: auto;
+    padding: 10px 16px;
+}
+
+.hero-text {
+    flex: 2 1 60%;
+    max-width: 80%;
+}
+
+/* Header avatar shown in top actions */
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #3730a3;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.top-actions .user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 6px;
+}
+
+.search-row {
+    margin-bottom: 20px;
+    display: grid;
+    gap: 16px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    background: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-row button {
+    border-radius: 999px;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #334155;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.filter-row button.active,
+.filter-row button:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.nav-toolbar {
+    display: grid;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab {
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    background: #f8fafc;
+    color: #374151;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tab.active,
+.tab:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.search-bar {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* Compact filters: price select + type pills */
+.compact-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.compact-filters .filter-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+.filter-right {
+    display: flex;
+    gap: 8px;
+}
+
+.type-pill {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background: #f8fafc;
+    color: #374151;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.type-pill.active,
+.type-pill:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.favorite-btn, .detail-favorite-btn {
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+.favorite-btn.favorited, .detail-favorite-btn.favorited {
+    background: #ff6b6b;
+    color: #fff;
+    border-color: #ff6b6b;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #d1d5db;
+    background: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.search-bar input::placeholder {
+    color: #9ca3af;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.featured-rooms {
+    margin-bottom: 32px;
+}
+
+.featured-rooms h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.room-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.room-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.room-card-content {
+    padding: 16px;
+}
+
+.room-card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.room-card-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.room-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.room-card-link:hover .room-card-content h3 {
+    color: #2563eb;
+}
+
+.card-featured {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    align-items: start;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.card-image {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-featured h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.card-featured p {
+    margin-bottom: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.card-featured .button {
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .card-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+}
+
+

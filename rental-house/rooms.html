@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách phòng cho thuê</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="page-container rooms-page">
+        <header>
+            <div class="room-hero-card">
+                <img class="room-hero-image" src="imgae/hà đông/Hoàng Gia Hotel/1.jpg" alt="Hoàng Gia Hotel">
+                <div class="room-hero-copy">
+                    <span class="eyebrow">Phòng cho thuê</span>
+                    <h1>Danh sách phòng đẹp, giá tốt và đầy đủ tiện nghi</h1>
+                    <p>Tìm phòng trọ, căn hộ dịch vụ và khách sạn mini tại các khu vực Đại Mỗ, Hà Đông, Hoài Đức và Quốc Oai. Xem nhanh, so sánh chi tiết và chọn phòng phù hợp với nhu cầu của bạn.</p>
+                    <div class="room-hero-actions">
+                        <a class="button primary" href="#listings">Xem tất cả phòng</a>
+                        <a class="button secondary" href="room-detail.html">Xem mẫu chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-banner">
+                <div class="overview-item">
+                    <strong>6+ lựa chọn</strong>
+                    <span>Phòng nổi bật</span>
+                </div>
+                <div class="overview-item">
+                    <strong>4 khu vực</strong>
+                    <span>Đại Mỗ, Hà Đông, Hoài Đức, Quốc Oai</span>
+                </div>
+                <div class="overview-item">
+                    <strong>Giá từ 1.9 triệu</strong>
+                    <span>Phù hợp ngân sách</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-bar">
+                <input type="search" placeholder="Tìm kiếm phòng theo tên hoặc địa chỉ...">
+                <div class="filter-row">
+                    <button class="active" type="button">Tất cả</button>
+                    <button type="button">Dưới 2 triệu</button>
+                    <button type="button">2-4 triệu</button>
+                    <button type="button">Trên 4 triệu</button>
+                </div>
+            </div>
+
+            <h2 class="section-title">Danh sách phòng</h2>
+            <div class="house-list" id="listings"></div>
+        </main>
+    </div>
+    <script src="assets/js/room.js"></script>
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/filters.js"></script>
+</body>
+</html>

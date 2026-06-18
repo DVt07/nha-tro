@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Groups</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/groups.css">
+</head>
+<body class="page-container rooms-page">
+  <header>
+    <h1>Groups</h1>
+    <p>Quản lý nhóm cộng đồng và chia sẻ chi tiêu</p>
+  </header>
+
+  <main>
+    <section class="groups-actions">
+      <div class="action-left">
+        <button class="button primary" id="create-group">Tạo nhóm mới</button>
+        <button class="button" id="join-group">Tham gia nhóm</button>
+      </div>
+      <div class="action-right">
+        <input class="search-input" type="search" placeholder="Tìm kiếm nhóm...">
+        <button class="button" id="search-group">Tìm</button>
+      </div>
+    </section>
+
+    <section class="groups-list">
+      <h2>Danh sách nhóm</h2>
+      <ul class="list-groups">
+        <li class="group-item">
+          <div class="group-main">
+            <strong class="group-name">Nhóm Nhà Trọ Đại Mỗ</strong>
+            <span class="group-meta">Trưởng nhóm: Minh - 12 thành viên</span>
+          </div>
+          <div class="group-actions">
+            <a class="button" href="group-detail.html?group=nhadatimo">Xem chi tiết</a>
+            <button class="button secondary">Tham gia</button>
+          </div>
+        </li>
+        <li class="group-item">
+          <div class="group-main">
+            <strong class="group-name">Nhóm Hoàng Gia</strong>
+            <span class="group-meta">Trưởng nhóm: Lan - 8 thành viên</span>
+          </div>
+          <div class="group-actions">
+            <a class="button" href="group-detail.html?group=hoanggia">Xem chi tiết</a>
+            <button class="button secondary">Tham gia</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Quản lý nhóm — Theo dõi thành viên và chi tiêu</p>
+  </footer>
+</body>
+</html>
