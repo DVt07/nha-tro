@@ -78,7 +78,7 @@ function initLoginPage() {
 
   const currentUser = AuthStorage.getCurrentUser();
   if (currentUser) {
-    window.location.href = 'profile.html';
+    window.location.href = '../index.html';
     return;
   }
 
@@ -105,8 +105,8 @@ function initLoginPage() {
       fullName: user.fullName || user.username,
       phone: user.phone || ''
     });
-
-    window.location.href = 'profile.html';
+    // Sau khi đăng nhập thành công chuyển về trang chủ
+    window.location.href = '../index.html';
   });
 }
 
@@ -116,7 +116,7 @@ function initRegisterPage() {
 
   const currentUser = AuthStorage.getCurrentUser();
   if (currentUser) {
-    window.location.href = 'profile.html';
+    window.location.href = '../index.html';
     return;
   }
 
@@ -157,7 +157,8 @@ function initRegisterPage() {
     AuthStorage.setUsers(users);
 
     showAlert('Đăng ký thành công. Vui lòng đăng nhập.');
-    window.location.href = 'login.html';
+    // Sau khi đăng ký thành công chuyển về trang chủ
+    window.location.href = '../index.html';
   });
 }
 
