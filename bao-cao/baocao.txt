@@ -31,6 +31,8 @@ Kho lưu trữ GitHub: https://github.com/DVt07/nha-tro
 - Xung đột mã nguồn (Merge Conflict) khi làm việc nhóm.
 - Đồng bộ dữ liệu giữa các thành viên chưa nhất quán.
 - Một số lỗi giao diện trên các trang web.
+- Đẩy lên github 
+- Liên kết các folder lại với nhau 
 
 5. Cách xử lý
 - Sử dụng Git Pull trước khi Push.
@@ -38,12 +40,23 @@ Kho lưu trữ GitHub: https://github.com/DVt07/nha-tro
 - Thường xuyên Commit với nội dung rõ ràng.
 - Trao đổi với các thành viên trước khi sửa cùng một file.
 
-6. Kế hoạch tiếp theo
-- Hoàn thiện chức năng đăng nhập.
-- Hoàn thiện quản lý phòng trọ.
-- Bổ sung chức năng tìm kiếm phòng.
-- Kiểm tra và sửa lỗi giao diện.
-- Hoàn thiện báo cáo dự án.
+6. Định hướng phát triển trong tương lai
+Để nâng cao chất lượng và tính thực tiễn của website Quản Lý Nhà Trọ, nhóm dự kiến phát triển thêm các chức năng sau:
+
+- Xây dựng hệ thống đăng ký và đăng nhập bằng email hoặc số điện thoại.
+- Bổ sung chức năng phân quyền người dùng (Chủ trọ, Người thuê, Quản trị viên).
+- Tích hợp cơ sở dữ liệu để lưu trữ thông tin lâu dài.
+- Thêm chức năng thanh toán tiền phòng trực tuyến.
+- Tự động tính tiền điện, nước và các chi phí phát sinh hàng tháng.
+- Gửi thông báo nhắc đóng tiền qua email hoặc tin nhắn.
+- Bổ sung chức năng tìm kiếm và lọc phòng theo giá, diện tích, vị trí.
+- Thống kê doanh thu và chi phí bằng biểu đồ trực quan.
+- Tối ưu giao diện trên điện thoại và máy tính bảng.
+- Tăng cường bảo mật thông tin người dùng.
+- Triển khai website lên Internet để người dùng có thể truy cập mọi lúc, mọi nơi.
+
+Mục tiêu cuối cùng là xây dựng một hệ thống quản lý nhà trọ hoàn chỉnh, giúp chủ trọ quản lý hiệu quả
+và hỗ trợ người thuê dễ dàng tra cứu thông tin, thanh toán cũng như liên hệ với chủ trọ.
 
 7. Kết luận
 Dự án đã hoàn thành phần lớn giao diện và cấu trúc chức năng cơ bản. Trong thời gian tới sẽ tập trung hoàn thiện các chức năng còn thiếu, kiểm thử và tối ưu hệ thống trước khi nghiệm thu.
